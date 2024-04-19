@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Boat Manager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+745bd57cc43760793f2a574e8f015b85e3a6cdc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Boat Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Boat Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

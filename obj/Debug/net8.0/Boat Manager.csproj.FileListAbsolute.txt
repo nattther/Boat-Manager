@@ -12,3 +12,4 @@ C:\Users\Nathan-Efficom\Desktop\cours\Boat Manager\obj\Debug\net8.0\refint\Boat 
 C:\Users\Nathan-Efficom\Desktop\cours\Boat Manager\obj\Debug\net8.0\Boat Manager.pdb
 C:\Users\Nathan-Efficom\Desktop\cours\Boat Manager\obj\Debug\net8.0\Boat Manager.genruntimeconfig.cache
 C:\Users\Nathan-Efficom\Desktop\cours\Boat Manager\obj\Debug\net8.0\ref\Boat Manager.dll
+C:\Users\Nathan-Efficom\Desktop\cours\Boat Manager\obj\Debug\net8.0\Boat Manager.sourcelink.json
