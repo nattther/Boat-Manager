@@ -33,7 +33,6 @@
             return;
         }
 
-
         if (bateau is BateauVoile && nombrePassagers > 4)
         {
             Console.WriteLine("Embarquement impossible, nombre de passagers trop élevé pour un bateau à voile");
@@ -45,9 +44,15 @@
             return;
         }
 
-
         Console.WriteLine($"Enregistrement de {nombrePassagers} passagers à bord.");
 
-        bateau.AfficherInventaire();
+
+        bateau.EmbarquerPassagers(nombrePassagers);
+
+
+        bateau.Partir();
+
+
+        bateau.Retour();
     }
 }
