@@ -4,9 +4,9 @@ public class Passager
     public int Age { get; set; }
 
 
-    public Passager(string nom, int age)
+    public Passager(string nom)
     {
         Nom = nom;
-        Age = age;
+
     }
 }

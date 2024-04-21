@@ -1,10 +1,10 @@
 public class Bateau
 {
     public Inventaire InventaireBateau { get; protected set; }
-
+    public List<Passager> Passagers { get; private set; }
     public Bateau()
     {
-
+        Passagers = new List<Passager>();
         InventaireBateau = new Inventaire();
     }
 
@@ -19,18 +19,20 @@ public class Bateau
         Console.WriteLine($"Embarquement de {nombrePassagers} passagers...");
     }
 
-    public virtual void Retour()
-    {
-        Console.WriteLine("Arrivée à destination. Vérification de l'inventaire :");
-        InventaireBateau.VerifierInventaire();
-    }
+
+  public virtual void Retour()
+{
+    Console.WriteLine("Arrivée à destination. Vérification de l'inventaire :");
+
+}
+
 }
 public class BateauVoile : Bateau
 {
     public BateauVoile()
     {
 
-        InventaireBateau = new Inventaire(new string[] { "Voile", "Mât", "Gouvernail", "Tangon" });
+        InventaireBateau = new Inventaire(new string[] { "Boisson", "Voile", "Gilet" });
     }
 
 
@@ -43,8 +45,16 @@ public class BateauVoile : Bateau
 
     public override void Retour()
     {
-        Console.WriteLine("Arrivée à destination pour le bateau à voile. Vérification de l'inventaire :");
-        InventaireBateau.VerifierInventaire();
+        Console.WriteLine("Arrivée à destination pour le bateau à voile.");
+
+    Console.WriteLine("Passagers à bord :");
+    
+    foreach (var passager in Passagers)
+    {
+        Console.WriteLine($"{passager.Nom} a profité du voyage");
+    }
+                    Thread.Sleep(2000); 
+    InventaireBateau.VerifierInventaire();
     }
 }
 
@@ -53,7 +63,7 @@ public class BateauMoteur : Bateau
     public BateauMoteur()
     {
 
-        InventaireBateau = new Inventaire(new string[] { "Moteur", "Réservoir d'essence", "Hélice", "Bouée de traction" });
+        InventaireBateau = new Inventaire(new string[] { "Moteur", "Réservoir d'essence", "boisson" });
     }
 
 
@@ -66,7 +76,15 @@ public class BateauMoteur : Bateau
 
     public override void Retour()
     {
-        Console.WriteLine("Arrivée à destination pour le bateau à moteur. Vérification de l'inventaire :");
-        InventaireBateau.VerifierInventaire();
+        Console.WriteLine("Arrivée à destination pour le bateau à moteur.");
+
+    Console.WriteLine("Passagers à bord :");
+    
+    foreach (var passager in Passagers)
+    {
+        Console.WriteLine($"{passager.Nom} a profité du voyage");
+    }
+                    Thread.Sleep(2000); 
+    InventaireBateau.VerifierInventaire();
     }
 }
