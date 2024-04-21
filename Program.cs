@@ -1,18 +1,14 @@
 ﻿internal class Program
 {
-
-static void Main(string[] args)
+    static void Main(string[] args)
     {
-
         Console.WriteLine("Bienvenue chez le loueur de bateaux !");
         Console.WriteLine("Choisissez le type de bateau :");
         Console.WriteLine("1. Bateau à voile");
         Console.WriteLine("2. Bateau à moteur");
         Console.Write("Votre choix : ");
 
-
         int choixBateau = int.Parse(Console.ReadLine());
-
 
         Bateau bateau;
         switch (choixBateau)
@@ -24,12 +20,34 @@ static void Main(string[] args)
                 bateau = new BateauMoteur();
                 break;
             default:
-                Console.WriteLine("Choix invalide. Veuillez choisir 1 ou 2.");
+                Console.WriteLine("Veuillez choisir 1 ou 2.");
                 return;
         }
 
+        Console.Write("Entrez le nombre de passagers : ");
+        int nombrePassagers = int.Parse(Console.ReadLine());
+
+        if (nombrePassagers <= 0)
+        {
+            Console.WriteLine("Nombre de passagers invalide");
+            return;
+        }
+
+
+        if (bateau is BateauVoile && nombrePassagers > 4)
+        {
+            Console.WriteLine("Embarquement impossible, nombre de passagers trop élevé pour un bateau à voile");
+            return;
+        }
+        else if (bateau is BateauMoteur && nombrePassagers > 8)
+        {
+            Console.WriteLine("Embarquement impossible, nombre de passager trop élevé pour un bateau à moteur");
+            return;
+        }
+
+
+        Console.WriteLine($"Enregistrement de {nombrePassagers} passagers à bord.");
 
         bateau.AfficherInventaire();
     }
-
 }
