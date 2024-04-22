@@ -4,8 +4,8 @@
 {
     Console.WriteLine("Bienvenue chez le loueur de bateaux !");
     Console.WriteLine("Choisissez le type de bateau :");
-    Console.WriteLine("1. Bateau à voile");
-    Console.WriteLine("2. Bateau à moteur");
+    Console.WriteLine("1. Bateau à voile (4 places max)");
+    Console.WriteLine("2. Bateau à moteur (8 places max)");
     Console.Write("Votre choix : ");
 
     int choixBateau = int.Parse(Console.ReadLine());
